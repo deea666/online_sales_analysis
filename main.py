@@ -1,5 +1,6 @@
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 manager = ProductManager()
 
@@ -17,4 +18,16 @@ manager.display_products()
 print(
     f"\nValoarea totala a inventarului: "
     f"{manager.total_inventory_value()} lei"
+)
+cart = Cart()
+
+cart.add_to_cart(product1)
+cart.add_to_cart(product2)
+cart.add_to_cart(product3)
+
+cart.display_cart()
+
+print(
+    f"\nValoarea totala de plata: "
+    f"{cart.total_cart_value()} lei"
 )
